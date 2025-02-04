@@ -1,15 +1,12 @@
-import os
 import torch
 import numpy as np
-import seaborn as sns
 import torch.nn as nn
 import torch.optim as optim
-import matplotlib.pyplot as plt
 
 from tqdm import tqdm
 from sklearn.metrics import confusion_matrix
 from torch.utils.data import DataLoader, TensorDataset
-from plot_utils import plot_confusion_matrix, plot_loss_curve
+from utils.plot_utils import plot_confusion_matrix, plot_loss_curve
 
 class MLPClassifier(nn.Module):
     def __init__(self, input_dim):

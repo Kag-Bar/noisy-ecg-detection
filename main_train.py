@@ -1,8 +1,8 @@
 import os.path
 
 from DataLoader import ECGDataLoader
-from train_and_eval import train_and_evaluate
-from train_and_eval_CNN import train_and_evaluate_CNN
+from train_test_eval.train_and_eval import train_and_evaluate
+from train_test_eval.train_and_eval_CNN import train_and_evaluate_CNN
 
 train_method = 'CNN'
 X_array_path = 'output/X_array.npy'

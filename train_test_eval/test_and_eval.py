@@ -2,8 +2,8 @@ import torch
 import numpy as np
 from sklearn.metrics import confusion_matrix
 
-from utils import signal_to_image
-from plot_utils import plot_confusion_matrix
+from utils.utils import signal_to_image
+from utils.plot_utils import plot_confusion_matrix
 from train_and_eval_CNN import CNN, CNNAlex, CNNClassifier
 
 def test_and_eval(X, y_labels, model_path, model_name='resnet18', test=True, output_folder=None):

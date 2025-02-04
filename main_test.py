@@ -1,6 +1,6 @@
 from DataLoader import ECGDataLoader
-from test_and_eval import test_and_eval
-from plot_utils import plot_FP_FN_signals
+from train_test_eval.test_and_eval import test_and_eval
+from utils.plot_utils import plot_FP_FN_signals
 
 
 # Initialize

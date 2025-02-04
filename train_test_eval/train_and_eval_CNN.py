@@ -12,7 +12,7 @@ from tqdm import tqdm
 from torchvision.models import resnet18, alexnet
 
 from utils import signal_to_image
-from plot_utils import (
+from utils.plot_utils import (
     plot_data_distribution,
     plot_roc_curve,
     plot_loss_curve,

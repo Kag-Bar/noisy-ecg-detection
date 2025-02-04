@@ -1,0 +1,22 @@
+{"train_method": "CNN",
+  "X_array_path": "output/X_array.npy",
+  "y_df_path": "output/y_label_df.csv",
+  "output_folder": "output/train",
+  "data_loader_cfg": {
+    "target_fs": 300,
+    "target_length": 3000,
+    "signal_lead": "I",
+    "min_max_norm": false,
+    "pass_filter": "hpf",
+    "noise_ratio": 0.4,
+    "sub_sample_CINC_2017": true,
+    "plot_samples": 3
+  },
+  "training_cfg": {
+    "model_name": "resnet18",
+    "batch_size": 128,
+    "epochs": 12,
+    "class_weights": null,
+    "l2_lambda": null
+  }
+}

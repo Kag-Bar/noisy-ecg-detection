@@ -1,0 +1,14 @@
+{"train_method": "CNN",
+  "X_array_path": "output_test/X_array.npy",
+  "y_df_path": "output_test/y_label_df.csv",
+  "output_folder": "output/train",
+  "model_path": "output_test/best_model_fold_3.pth",
+  "model_name": "resnet18",
+  "data_loader_cfg": {
+    "target_fs": 300,
+    "target_length": 3000,
+    "signal_lead": "I",
+    "min_max_norm": false,
+    "pass_filter": "hpf"
+  }
+}

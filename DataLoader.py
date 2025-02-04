@@ -11,11 +11,12 @@ from sklearn.model_selection import train_test_split
 
 
 class ECGDataLoader:
-    def __init__(self, target_fs=300, target_length=3000, signal_lead='I', min_max_norm=False, pass_filter='hpf'):
+    def __init__(self, data_lodaer_dict):
         """
         Initializes the ECGDataLoader with specified parameters for preprocessing ECG signals.
 
         Parameters:
+            data_lodaer_dict (dict) containing:
         - target_fs (int, optional): Target sampling frequency of the ECG signal in Hz. Default is 300 Hz.
         - target_length (int, optional): Target length of ECG signals (in number of samples). Signals will be trimmed or padded to match this length. Default is 3000 samples.
         - signal_lead (str, optional): The lead from which the ECG signal is extracted. Options include:
@@ -32,15 +33,16 @@ class ECGDataLoader:
         - min_max_norm (bool): Stores whether min-max normalization is enabled.
         - filter_method (str): Stores the selected filtering method.
         """
-        self.signal_lead = signal_lead
-        self.target_fs = target_fs
-        self.fixed_length = target_length
+        self.signal_lead = data_lodaer_dict.get("signal_lead", "I")
+        self.target_fs = data_lodaer_dict.get("target_fs", 300)
+        self.fixed_length = data_lodaer_dict.get("target_length", 3000)
+        self.min_max_norm = data_lodaer_dict.get("min_max_norm", False)
+        self.filter_method = data_lodaer_dict.get("pass_filter", "hpf")
+
         self.X = []
         self.y_labels = {}
         self.min_size = None
         self.max_size = None
-        self.min_max_norm = min_max_norm
-        self.filter_method = pass_filter
 
 
     def load_data(self, folder_path, labels_path, data_type, origin_freq=300, normalize=True, resample_freq=False, augment=False):

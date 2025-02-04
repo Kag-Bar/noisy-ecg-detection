@@ -19,8 +19,6 @@ from plot_utils import (
     plot_confusion_matrix
 )
 
-
-
 class CNNAlex(nn.Module):
     def __init__(self):
         super().__init__()

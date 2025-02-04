@@ -33,7 +33,6 @@ def main():
     if X_array_path is not None and y_df_path is not None:
         X, y_labels = loader.read_arrays(X_array_path, y_df_path)
     else:
-        loader = ECGDataLoader()
         loader.load_data(
             folder_path='sample2017/validation',
             labels_path=['sample2017/validation/REFERENCE.csv'],

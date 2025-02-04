@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 
 
 class ECGDataLoader:
-    def __init__(self, data_lodaer_dict):
+    def __init__(self, data_lodaer_dict={}):
         """
         Initializes the ECGDataLoader with specified parameters for preprocessing ECG signals.
 
